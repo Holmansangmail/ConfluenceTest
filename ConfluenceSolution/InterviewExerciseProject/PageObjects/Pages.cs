@@ -1,11 +1,10 @@
-﻿using AutomatioPracticeProject.PageObjects.Women;
+﻿using InterviewExerciseProject.PageObjects.Women;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace AutomatioPracticeProject.PageObjects
+namespace InterviewExerciseProject.PageObjects
 {
+
+    // Create instances of the different pages in order to be used in the test suites
 
     class Pages
     {

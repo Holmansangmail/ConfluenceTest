@@ -1,14 +1,12 @@
-﻿using AutomatioPracticeProject.PageObjects.Base;
-using AutomatioPracticeProject.PageObjects.Women.Map;
+﻿using InterviewExerciseProject.PageObjects.Base;
+using InterviewExerciseProject.PageObjects.Women.Map;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
-using SeleniumExtras.WaitHelpers;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace AutomatioPracticeProject.PageObjects
+namespace InterviewExerciseProject.PageObjects
 {
+
+    // It contains all of the methods available for this page
+
     public class WomenPage : BasePage
     {
         public readonly WomenPageMap Map;
@@ -17,7 +15,6 @@ namespace AutomatioPracticeProject.PageObjects
         {
             Map = new WomenPageMap(driver);
         }
-
         public void OpenAdditionalDetails(int itemNumber)
         {
             Helper.MoveToElement(Map.ProductBox(itemNumber));

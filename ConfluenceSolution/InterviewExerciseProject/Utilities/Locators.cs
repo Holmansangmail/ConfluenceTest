@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AutomatioPracticeProject.Utilities
+﻿
+namespace InterviewExerciseProject.Utilities
 {
     public enum Locators
     {

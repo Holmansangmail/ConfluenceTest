@@ -1,13 +1,9 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.WaitHelpers;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-
-namespace AutomatioPracticeProject.Utilities
+namespace InterviewExerciseProject.Utilities
 {
     public class Helpers
     {
@@ -22,7 +18,7 @@ namespace AutomatioPracticeProject.Utilities
             Driver.Navigate().GoToUrl(url);
         }
 
-        public void WaitForPageToLoad(By name, int duration = 10)
+        public void WaitForPageToLoad(By name, int duration = 20)
         {
             var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(duration));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(name));

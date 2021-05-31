@@ -1,14 +1,16 @@
-﻿using AutomatioPracticeProject.PageObjects.Base;
-using AutomatioPracticeProject.PageObjects.Women.Map;
+﻿using InterviewExerciseProject.PageObjects.Base;
+using InterviewExerciseProject.PageObjects.Women.Map;
 using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace AutomatioPracticeProject.PageObjects.Women
+namespace InterviewExerciseProject.PageObjects.Women
 {
+
+    // It contains all of the methods available for this page
+
     public class AdditionalDetailsPage : BasePage
     {
+        
         public readonly AdditionalDetailsPageMap Map;
 
         public AdditionalDetailsPage(IWebDriver driver) : base(driver)
@@ -64,6 +66,9 @@ namespace AutomatioPracticeProject.PageObjects.Women
 
             if(webItemNumber == itemNumber)
             {
+                string value = $@"item {itemNumber} was added correclty.";
+                ProductsInCart = itemNumber;
+                Console.WriteLine(value);
                 correctResult = true;
             }
 

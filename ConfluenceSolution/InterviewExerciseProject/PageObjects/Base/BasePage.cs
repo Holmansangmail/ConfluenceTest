@@ -1,13 +1,11 @@
-﻿using AutomatioPracticeProject.Utilities;
+﻿using InterviewExerciseProject.Utilities;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace AutomatioPracticeProject.PageObjects.Base
+namespace InterviewExerciseProject.PageObjects.Base
 {
     public class BasePage
     {
+        public static int ProductsInCart;
         protected Helpers Helper { get; }
 
         protected BasePage(IWebDriver driver)

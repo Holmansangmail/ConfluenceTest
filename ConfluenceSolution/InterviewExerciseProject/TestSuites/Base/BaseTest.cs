@@ -1,33 +1,32 @@
-﻿using AutomatioPracticeProject.PageObjects;
+﻿using InterviewExerciseProject.PageObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace AutomatioPracticeProject.TestSuites.Base
+namespace InterviewExerciseProject.TestSuites.Base
 {
+    [TestClass]
     public class BaseTest
     {
-        private IWebDriver Driver { get; set; }
+        private static IWebDriver Driver { get; set; }
 
-        [TestInitialize]
-        public void SetupTest()
+        [AssemblyInitialize]
+        public static void SetupTest(TestContext context)
         {
             var chromeOptions = new ChromeOptions();
             chromeOptions.AddArguments("start-maximized");
             chromeOptions.PageLoadStrategy = PageLoadStrategy.Normal;
             Driver = new ChromeDriver(chromeOptions);
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
             Pages.Init(Driver);
             Pages.Home.GoTo();
         }
 
-        [TestCleanup]
-        public void TeardownTest()
+        [AssemblyCleanup]
+        public static void TeardownTest()
         {
             Driver.Quit();
         }
-
     }
 }

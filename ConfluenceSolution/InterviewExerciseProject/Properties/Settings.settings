@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="InterviewExerciseProject.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="UrlPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\DataSources\Items_To_Add.xls</Value>
+    </Setting>
+    <Setting Name="UrlSheet" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">URL</Value>
+    </Setting>
+    <Setting Name="UrlRow" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="UrlColumn" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
